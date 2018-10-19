@@ -1,12 +1,12 @@
 import {gql} from 'apollo-server';
 
 export default gql`
-  type Continent {
+  type Continent @cacheControl(maxAge: 86400) {
     code: String
     name: String
   }
 
-  type Country {
+  type Country @cacheControl(maxAge: 86400) {
     code: String
     name: String
     native: String
@@ -18,7 +18,7 @@ export default gql`
     emojiU: String
   }
 
-  type Language {
+  type Language @cacheControl(maxAge: 86400) {
     code: String
     name: String
     native: String

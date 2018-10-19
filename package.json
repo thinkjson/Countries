@@ -1,11 +1,12 @@
 {
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "scripts": {
-    "pretest": "eslint index.js",
+    "pretest": "eslint server.js",
     "test": "echo \"Error: no test specified\" && exit",
-    "start": "nodemon -r dotenv/config -r esm index.js"
+    "dev": "nodemon -r dotenv/config -r esm server.js",
+    "start": "node -r esm server.js"
   },
   "dependencies": {
     "apollo-server": "^2.1.0",
